@@ -5,4 +5,5 @@
     <string name="btn_3">버튼 3</string>
     <string name="btn_4">버튼 4</string>
     <string name="btn_5">버튼 5</string>
+    <string name="textView">여기는 텍스트뷰 입니다.</string>
 </resources>
