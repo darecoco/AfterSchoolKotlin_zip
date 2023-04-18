@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellowgreen">#CFFABC</color>
     <color name="darksky">#459BD5</color>
-    <color name="gray">#EAEAEA</color>
+    <color name="text_color">#6C46B3</color>
 </resources>

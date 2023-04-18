@@ -2,4 +2,5 @@
 <resources>
     <dimen name="margin_base">20dp</dimen>
     <dimen name="textSize_base">20sp</dimen>
+    <dimen name="text_large">35sp</dimen>
 </resources>
