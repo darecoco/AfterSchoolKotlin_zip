@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ViewPropertiesTest</string>
+    <string name="btn_1">버튼 1</string>
+    <string name="btn_2">버튼 2</string>
+    <string name="btn_3">버튼 3</string>
+    <string name="btn_4">버튼 4</string>
+    <string name="btn_5">버튼 5</string>
 </resources>
