@@ -19,7 +19,6 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:text="@string/btn_1" />
     <Button
         android:layout_width="match_parent"
@@ -29,6 +28,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/btn_3" />
     <Button
         android:layout_width="match_parent"
@@ -38,5 +38,6 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="false"
         android:text="@string/btn_5" />
 </LinearLayout>
