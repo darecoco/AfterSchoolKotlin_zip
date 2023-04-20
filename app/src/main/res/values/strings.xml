@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">VeiwPropertiesTest2</string>
+    <string name="text1">TextView 연습 1</string>
+    <string name="text2">TextView 연습 2</string>
+    <string name="text3">TextView 연습 3</string>
+</resources>
