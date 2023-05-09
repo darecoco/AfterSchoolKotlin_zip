@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ButtonTest2</string>
+    <string name="btn1">미여정과고</string>
+    <string name="btn2">안드로이드프로그램</string>
+</resources>
