@@ -15,5 +15,13 @@ class MainActivity : AppCompatActivity() {
         text1 = findViewById<TextView>(R.id.text1);
         btn1 = findViewById<Button>(R.id.btn1);
         btn2 = findViewById<Button>(R.id.btn2);
+
+        btn1.setOnClickListener{
+            text1.text = btn1.text
+        }
+        btn2.setOnClickListener{
+            text1.setText(btn2.text)
+            //위 방식과 동일하게 동작함.
+        }
     }
 }
