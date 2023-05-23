@@ -15,7 +15,7 @@
         android:textSize="@dimen/text_size_medium"
         />
 
-    <CheckBox
+    <Switch
         android:id="@+id/check_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,13 +55,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/radio_arctic"/>
         </RadioGroup>
-
-        <Button
-            android:id="@+id/btn_done"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_medium"
-            android:text="@string/btn_done"/>
 
         <ImageView
             android:id="@+id/imgv"
