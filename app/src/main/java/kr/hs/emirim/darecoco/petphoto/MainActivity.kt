@@ -4,13 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
+import android.widget.*
 import kr.hs.emirim.darecoco.petphoto.R.id.rg
 
 class MainActivity : AppCompatActivity() {
@@ -35,6 +29,15 @@ class MainActivity : AppCompatActivity() {
                 linear.visibility = View.VISIBLE
             }else {
                 linear.visibility = View.INVISIBLE
+            }
+        }
+
+        btnDone.setOnClickListener{
+            when(rg.checkedRadioButtonId){
+                R.id.radio_red -> imgv.setImageResource(R.drawable.red_fox)
+                R.id.radio_desert -> imgv.setImageResource(R.drawable.desert_fox)
+                R.id.radio_arctic -> imgv.setImageResource(R.drawable.arctic_fox)
+                else -> Toast.makeText(applicationContext, "라디오버튼이 선택되지 않았습니다.", Toast.LENGTH_SHORT).show()
             }
         }
     }
