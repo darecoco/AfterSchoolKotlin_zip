@@ -7,4 +7,6 @@
     <string name="radio_desert">사막 여우</string>
     <string name="radio_arctic">북극 여우</string>
     <string name="btn_done">선택완료</string>
+    <string name="btn_finish">종료</string>
+    <string name="btn_first">처음으로</string>
 </resources>
