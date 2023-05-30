@@ -9,6 +9,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 
 class selfCoding5_3_Activity2 : AppCompatActivity() {
+    lateinit var edit : EditText
+    lateinit var text:TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -17,20 +20,21 @@ class selfCoding5_3_Activity2 : AppCompatActivity() {
         val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
         setContentView(main_linear, params)
 
-        val edit_text = EditText(this)
-        main_linear.addView(edit_text)
+        edit = EditText(this)
+        edit.hint = "아무거나 쳐보세용"
+        main_linear.addView(edit)
 
         val btn = Button(this)
         btn.text="버튼입니다. ㅖ."
         btn.setBackgroundColor(Color.YELLOW)
         main_linear.addView(btn)
 
-        val text_view = TextView(this)
-        text_view.setTextColor(Color.rgb(241, 146, 146))
-        main_linear.addView(text_view)
+        text = TextView(this)
+        text.setTextColor(Color.rgb(241, 146, 146))
+        main_linear.addView(text)
 
         btn.setOnClickListener {
-            text_view.setText(edit_text.text)
+            text.text = edit.text
         }
     }
 }
