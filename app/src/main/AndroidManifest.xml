@@ -12,6 +12,12 @@
         android:theme="@style/Theme.ReletiveLayoutTest1"
         tools:targetApi="31">
         <activity
+            android:name=".Relative3"
+            android:exported="false" />
+        <activity
+            android:name=".relative2"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
