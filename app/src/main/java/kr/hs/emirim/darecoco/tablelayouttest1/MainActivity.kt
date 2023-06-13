@@ -2,9 +2,11 @@ package kr.hs.emirim.darecoco.tablelayouttest1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     lateinit internal var edit1 : EditText
@@ -30,5 +32,41 @@ class MainActivity : AppCompatActivity() {
         btnMultiply = findViewById(R.id.btnMultiply)
         btnDivide = findViewById(R.id.btnDivide)
         textReasult = findViewById(R.id.textResult)
+
+        btnPlus.setOnClickListener(btnListener)
+        btnMinus.setOnClickListener(btnListener)
+        btnMultiply.setOnClickListener(btnListener)
+        btnDivide.setOnClickListener(btnListener)
+
+        for(i in 0.. btnIds.size-1 step 1){
+            btns.add(findViewById(btnIds[i]))
+        }
+        for(i in 0.. btnIds.size-1 step 1){
+            btns[i].setOnClickListener {
+                if(edit1.isFocused){
+                    num1 = edit1.text.toString() + btns[i].text.toString()
+                    edit1.setText(num1)
+                }else if(edit2.isFocused){
+                    num2 = edit2.text.toString() + btns[i].text.toString()
+                    edit2.setText(num2)
+                }else{
+                    Toast.makeText(applicationContext, "먼저 입력할 곳을 선택해 주세요!", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    var btnListener = OnClickListener{
+        num1 = edit1.text.toString()
+        num2 = edit2.text.toString()
+
+        when(it.id){
+            R.id.btnPlus -> result = num1.toInt() + num2.toInt()
+            R.id.btnMinus -> result = num1.toInt() - num2.toInt()
+            R.id.btnMultiply -> result = num1.toInt() * num2.toInt()
+            R.id.btnDivide -> result = num1.toInt() / num2.toInt()
+        }
+        textReasult.setText(R.string.btn_result)
+        textReasult.append(result.toString())
     }
 }
