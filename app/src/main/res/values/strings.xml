@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FrameLayoutTest</string>
+    <string name="btn1">정태현</string>
+    <string name="btn2">안보영</string>
+    <string name="btn3">연선우</string>
+</resources>
