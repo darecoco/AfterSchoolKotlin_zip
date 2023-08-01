@@ -15,11 +15,9 @@ import android.widget.TimePicker
 
 class MainActivity : AppCompatActivity() {
     lateinit var chrono1 : Chronometer
-    lateinit var btnStart : Button
     lateinit var rg : RadioGroup
     lateinit var radioCal : RadioButton
     lateinit var radioTime : RadioButton
-    lateinit var btnEnd : Button
     lateinit var textview : TextView
     lateinit var calendar: CalendarView
     lateinit var timepicker : TimePicker
@@ -32,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         chrono1 = findViewById(R.id.chrono1)
-        btnStart = findViewById(R.id.btnstart)
-        btnEnd = findViewById(R.id.btn_end)
         rg=findViewById(R.id.rg)
         radioCal = findViewById(R.id.radioData)
         radioTime = findViewById(R.id.radioTime)
@@ -42,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         textview = findViewById(R.id.textview)
 
         timepicker.visibility = View.INVISIBLE
-        calendar.visibility = View.VISIBLE
+        calendar.visibility = View.INVISIBLE
+        rg.visibility = View.INVISIBLE
 
         radioCal.setOnClickListener{
             timepicker.visibility = View.INVISIBLE
@@ -53,19 +50,24 @@ class MainActivity : AppCompatActivity() {
             calendar.visibility = View.INVISIBLE
         }
 
-        btnStart.setOnClickListener{
+        chrono1.setOnClickListener{
+            rg.visibility = View.VISIBLE
             chrono1.base = SystemClock.elapsedRealtime()
             chrono1.start()
             chrono1.setTextColor(Color.RED)
 
         }
 
-        btnEnd.setOnClickListener{
+        textview.setOnLongClickListener{
             chrono1.stop()
             chrono1.setTextColor(Color.BLUE)
             textview.setText("" + selectedYear + "년 " + selectedMonth + "월 " + selectedDay + "일 ")
             textview.append("" + timepicker.currentHour + "시 " + timepicker.currentMinute + "분 ")
             textview.append("예약됨")
+            rg.visibility = View.INVISIBLE
+            timepicker.visibility = View.INVISIBLE
+            calendar.visibility = View.INVISIBLE
+            true
         }
 
         calendar.setOnDateChangeListener{ calendarVeiw, year, month, day ->
