@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/rotetion"
+        android:title="그림 회전"/>
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/arcticFox"
+            android:title="북극여우"/>
+        <item
+            android:id="@+id/desertFox"
+            android:title="사막여우"/>
+        <item
+            android:id="@+id/redFox"
+            android:title="붉은여우"/>
+    </group>
+
+</menu>
