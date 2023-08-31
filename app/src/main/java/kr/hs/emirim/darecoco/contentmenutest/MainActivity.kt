@@ -1,8 +1,11 @@
 package kr.hs.emirim.darecoco.contentmenutest
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.style.BackgroundColorSpan
 import android.view.ContextMenu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -32,10 +35,44 @@ class MainActivity : AppCompatActivity() {
         var mInflater = this.menuInflater
         if(v === btn1){
             menu!!.setHeaderTitle("배경색 변경")
-            mInflater.inflater(R.menu.menu1, menu)
+            mInflater.inflate(R.menu.menu1, menu)
         }
         if(v === btn2){
-            mInflater.inflater(R.menu.menu1, menu)
+            mInflater.inflate(R.menu.menu2, menu)
         }
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        super.onContextItemSelected(item)
+
+        when(item.itemId){
+            R.id.itemRed -> {
+                linear.setBackgroundColor(Color.RED)
+                return true
+            }
+            R.id.itemBlue->{
+                linear.setBackgroundColor(Color.BLUE)
+                return true
+            }
+            R.id.itemYellow->{
+                linear.setBackgroundColor(Color.YELLOW)
+                return true
+            }
+
+            R.id.subRotate->{
+                btn1.rotation += 45f
+                return true
+            }
+            R.id.subSize->{
+                btn1.scaleX += 1f
+                return true
+            }
+            R.id.subOriginal->{
+                btn1.rotation=0f
+                btn1.scaleX=1f
+                return true
+            }
+        }
+        return false
     }
 }
