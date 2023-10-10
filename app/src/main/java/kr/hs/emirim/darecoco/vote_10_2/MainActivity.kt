@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         for(i in imgVId.indices){
             imgV[i] = findViewById(imgVId[i])
-            imgV[i]!!.setOnClickListener{ //null값과 상관없이 무조건 진행시켜!!
+            imgV[i]!!.setOnClickListener{ //null이 아닐 때에만 진행시켜!!
                 voteCount[i]++
                 Toast.makeText(applicationContext, imgName[i]+": "+voteCount[i]+"표", Toast.LENGTH_SHORT).show()
             }
