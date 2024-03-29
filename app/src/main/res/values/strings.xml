@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CodeLayout</string>
+    <string name="greeting">안녕하세요~미나상~</string>
+    <string name = "btn1_text">네이버 바로가기</string>
+    <string name = "btn2_text">엄마에게 전화걸기</string>
+    <string name = "btn3_text">갤러리 열기</string>
+    <string name = "btn4_text">끝내기</string>
+</resources>
