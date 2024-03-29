@@ -1,2 +1,5 @@
-# AfterSchoolKotlin_zip
+# 🌌 AfterSchoolKotlin_zip
 학교 방과후 Kotlin 수업에 진행됐던 코드들 모음 리포지터리
+
+방과후 수업에 진행된 Kotlin 코드들이 너무 많아 지저분해져서 하나로 통합시킨 리포지터리 입니다.
+각 코드들의 원본 리포지터리는 비공개 처리가 되어있습니다.
