@@ -1,0 +1,28 @@
+fun main() {
+    //var three : IntArray = intArray(1, 2, 3)
+    
+    var one = ArrayList<Int>(4)
+    one.add(18)
+    one.add(20)
+    var hap = one.get(0) + one.get(1)
+    //첫번째 값 + 두 번째 값
+    println(hap)
+    
+    //////////////////////////////////////////////////////////////////////
+    var one2 = Array<Int>(4, {0})
+    one2[0] = 10
+    one2[3] = 20
+    for(i in one.indices)
+    println(one[i])
+    
+    //////////////////////////////////////////////////////////////////////
+    var two = Array<IntArray>(3, {IntArray(4)})
+    two[0][0] = 100
+    two[2][3] = 200
+    
+    for(i in two.indices){
+        for(j in two[i].indices){
+            println(two[i][j])
+        }
+    }
+}

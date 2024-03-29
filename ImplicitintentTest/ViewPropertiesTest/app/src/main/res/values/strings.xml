@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ViewPropertiesTest</string>
+    <string name="btn_1">버튼 1</string>
+    <string name="btn_2">버튼 2</string>
+    <string name="btn_3">버튼 3</string>
+    <string name="btn_4">버튼 4</string>
+    <string name="btn_5">버튼 5</string>
+    <string name="textView">여기는 텍스트뷰 입니다.</string>
+    <string name="text_1">textSize 속성</string>
+    <string name="text_2">textColor 속성</string>
+    <string name="text_3">textStyle 속성</string>
+    <string name="text_4">typeface 속성</string>
+    <string name="text_5">single 속성 single 속성 single 속성 single 속성single 속성 single 속성 single 속성 single 속성</string>
+
+</resources>
